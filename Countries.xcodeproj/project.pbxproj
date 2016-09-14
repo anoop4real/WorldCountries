@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		767FAB681D890EE900869875 /* GenericCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = 767FAB671D890EE900869875 /* GenericCellData.m */; };
+		767FAB6B1D8915B000869875 /* CountryDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 767FAB6A1D8915B000869875 /* CountryDetailTableViewCell.m */; };
+		76B060DC1D844BAC00A55BE1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B060DB1D844BAC00A55BE1 /* main.m */; };
+		76B060DF1D844BAC00A55BE1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B060DE1D844BAC00A55BE1 /* AppDelegate.m */; };
+		76B060E51D844BAC00A55BE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76B060E31D844BAC00A55BE1 /* Main.storyboard */; };
+		76B060E71D844BAC00A55BE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76B060E61D844BAC00A55BE1 /* Assets.xcassets */; };
+		76B060EA1D844BAC00A55BE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76B060E81D844BAC00A55BE1 /* LaunchScreen.storyboard */; };
+		76B060F51D844BAC00A55BE1 /* CountriesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B060F41D844BAC00A55BE1 /* CountriesTests.m */; };
+		76B061021D844BE200A55BE1 /* CountriesStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B061011D844BE200A55BE1 /* CountriesStore.m */; };
+		76B061091D8454EC00A55BE1 /* CountriesDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B061081D8454EC00A55BE1 /* CountriesDataSource.m */; };
+		76B0610E1D845E4800A55BE1 /* CountriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B0610D1D845E4800A55BE1 /* CountriesViewController.m */; };
+		76B061121D84ACEE00A55BE1 /* SimpleCountry.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B061111D84ACEE00A55BE1 /* SimpleCountry.m */; };
+		76B061171D84AFAB00A55BE1 /* CountryTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B061161D84AFAB00A55BE1 /* CountryTableCell.m */; };
+		76B0611E1D84C04300A55BE1 /* AMNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B0611D1D84C04300A55BE1 /* AMNetworkManager.m */; };
+		76B061251D85F88E00A55BE1 /* CountryDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B061241D85F88E00A55BE1 /* CountryDetailsViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		76B060F11D844BAC00A55BE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76B060CF1D844BAC00A55BE1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 76B060D61D844BAC00A55BE1;
+			remoteInfo = Countries;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		767FAB661D890EE900869875 /* GenericCellData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenericCellData.h; sourceTree = "<group>"; };
+		767FAB671D890EE900869875 /* GenericCellData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenericCellData.m; sourceTree = "<group>"; };
+		767FAB691D8915B000869875 /* CountryDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryDetailTableViewCell.h; sourceTree = "<group>"; };
+		767FAB6A1D8915B000869875 /* CountryDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryDetailTableViewCell.m; sourceTree = "<group>"; };
+		76B060D71D844BAC00A55BE1 /* Countries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Countries.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		76B060DB1D844BAC00A55BE1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		76B060DD1D844BAC00A55BE1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		76B060DE1D844BAC00A55BE1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		76B060E41D844BAC00A55BE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		76B060E61D844BAC00A55BE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		76B060E91D844BAC00A55BE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		76B060EB1D844BAC00A55BE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76B060F01D844BAC00A55BE1 /* CountriesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountriesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		76B060F41D844BAC00A55BE1 /* CountriesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountriesTests.m; sourceTree = "<group>"; };
+		76B060F61D844BAC00A55BE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76B061001D844BE200A55BE1 /* CountriesStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountriesStore.h; sourceTree = "<group>"; };
+		76B061011D844BE200A55BE1 /* CountriesStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountriesStore.m; sourceTree = "<group>"; };
+		76B061071D8454EC00A55BE1 /* CountriesDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountriesDataSource.h; sourceTree = "<group>"; };
+		76B061081D8454EC00A55BE1 /* CountriesDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountriesDataSource.m; sourceTree = "<group>"; };
+		76B0610C1D845E4800A55BE1 /* CountriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountriesViewController.h; sourceTree = "<group>"; };
+		76B0610D1D845E4800A55BE1 /* CountriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountriesViewController.m; sourceTree = "<group>"; };
+		76B061101D84ACEE00A55BE1 /* SimpleCountry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleCountry.h; sourceTree = "<group>"; };
+		76B061111D84ACEE00A55BE1 /* SimpleCountry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleCountry.m; sourceTree = "<group>"; };
+		76B061151D84AFAB00A55BE1 /* CountryTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryTableCell.h; sourceTree = "<group>"; };
+		76B061161D84AFAB00A55BE1 /* CountryTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryTableCell.m; sourceTree = "<group>"; };
+		76B0611C1D84C04300A55BE1 /* AMNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMNetworkManager.h; sourceTree = "<group>"; };
+		76B0611D1D84C04300A55BE1 /* AMNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMNetworkManager.m; sourceTree = "<group>"; };
+		76B061231D85F88E00A55BE1 /* CountryDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryDetailsViewController.h; sourceTree = "<group>"; };
+		76B061241D85F88E00A55BE1 /* CountryDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryDetailsViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		76B060D41D844BAC00A55BE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76B060ED1D844BAC00A55BE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		76B060CE1D844BAC00A55BE1 = {
+			isa = PBXGroup;
+			children = (
+				76B060D91D844BAC00A55BE1 /* Countries */,
+				76B060F31D844BAC00A55BE1 /* CountriesTests */,
+				76B060D81D844BAC00A55BE1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		76B060D81D844BAC00A55BE1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				76B060D71D844BAC00A55BE1 /* Countries.app */,
+				76B060F01D844BAC00A55BE1 /* CountriesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		76B060D91D844BAC00A55BE1 /* Countries */ = {
+			isa = PBXGroup;
+			children = (
+				76B061181D84BEF500A55BE1 /* Network */,
+				76B061131D84AF4A00A55BE1 /* View */,
+				76B0610F1D84ACCC00A55BE1 /* Model */,
+				76B0610A1D845E1A00A55BE1 /* ViewControllers */,
+				76B061031D8453CD00A55BE1 /* ViewModel */,
+				76B060FF1D844BB400A55BE1 /* DataStore */,
+				76B060DD1D844BAC00A55BE1 /* AppDelegate.h */,
+				76B060DE1D844BAC00A55BE1 /* AppDelegate.m */,
+				76B060E31D844BAC00A55BE1 /* Main.storyboard */,
+				76B060E61D844BAC00A55BE1 /* Assets.xcassets */,
+				76B060E81D844BAC00A55BE1 /* LaunchScreen.storyboard */,
+				76B060EB1D844BAC00A55BE1 /* Info.plist */,
+				76B060DA1D844BAC00A55BE1 /* Supporting Files */,
+			);
+			path = Countries;
+			sourceTree = "<group>";
+		};
+		76B060DA1D844BAC00A55BE1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				76B060DB1D844BAC00A55BE1 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		76B060F31D844BAC00A55BE1 /* CountriesTests */ = {
+			isa = PBXGroup;
+			children = (
+				76B060F41D844BAC00A55BE1 /* CountriesTests.m */,
+				76B060F61D844BAC00A55BE1 /* Info.plist */,
+			);
+			path = CountriesTests;
+			sourceTree = "<group>";
+		};
+		76B060FF1D844BB400A55BE1 /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+				76B061001D844BE200A55BE1 /* CountriesStore.h */,
+				76B061011D844BE200A55BE1 /* CountriesStore.m */,
+			);
+			name = DataStore;
+			sourceTree = "<group>";
+		};
+		76B061031D8453CD00A55BE1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				76B061071D8454EC00A55BE1 /* CountriesDataSource.h */,
+				76B061081D8454EC00A55BE1 /* CountriesDataSource.m */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		76B0610A1D845E1A00A55BE1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				76B061221D85F87100A55BE1 /* CountryDetails */,
+				76B0610B1D845E2500A55BE1 /* CountryViewController */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		76B0610B1D845E2500A55BE1 /* CountryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				76B0610C1D845E4800A55BE1 /* CountriesViewController.h */,
+				76B0610D1D845E4800A55BE1 /* CountriesViewController.m */,
+			);
+			name = CountryViewController;
+			sourceTree = "<group>";
+		};
+		76B0610F1D84ACCC00A55BE1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				76B061101D84ACEE00A55BE1 /* SimpleCountry.h */,
+				76B061111D84ACEE00A55BE1 /* SimpleCountry.m */,
+				767FAB661D890EE900869875 /* GenericCellData.h */,
+				767FAB671D890EE900869875 /* GenericCellData.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		76B061131D84AF4A00A55BE1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				76B061141D84AF5300A55BE1 /* TableViewCells */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		76B061141D84AF5300A55BE1 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				76B061151D84AFAB00A55BE1 /* CountryTableCell.h */,
+				76B061161D84AFAB00A55BE1 /* CountryTableCell.m */,
+				767FAB691D8915B000869875 /* CountryDetailTableViewCell.h */,
+				767FAB6A1D8915B000869875 /* CountryDetailTableViewCell.m */,
+			);
+			name = TableViewCells;
+			sourceTree = "<group>";
+		};
+		76B061181D84BEF500A55BE1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				76B0611C1D84C04300A55BE1 /* AMNetworkManager.h */,
+				76B0611D1D84C04300A55BE1 /* AMNetworkManager.m */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		76B061221D85F87100A55BE1 /* CountryDetails */ = {
+			isa = PBXGroup;
+			children = (
+				76B061231D85F88E00A55BE1 /* CountryDetailsViewController.h */,
+				76B061241D85F88E00A55BE1 /* CountryDetailsViewController.m */,
+			);
+			name = CountryDetails;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		76B060D61D844BAC00A55BE1 /* Countries */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76B060F91D844BAC00A55BE1 /* Build configuration list for PBXNativeTarget "Countries" */;
+			buildPhases = (
+				76B060D31D844BAC00A55BE1 /* Sources */,
+				76B060D41D844BAC00A55BE1 /* Frameworks */,
+				76B060D51D844BAC00A55BE1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Countries;
+			productName = Countries;
+			productReference = 76B060D71D844BAC00A55BE1 /* Countries.app */;
+			productType = "com.apple.product-type.application";
+		};
+		76B060EF1D844BAC00A55BE1 /* CountriesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76B060FC1D844BAC00A55BE1 /* Build configuration list for PBXNativeTarget "CountriesTests" */;
+			buildPhases = (
+				76B060EC1D844BAC00A55BE1 /* Sources */,
+				76B060ED1D844BAC00A55BE1 /* Frameworks */,
+				76B060EE1D844BAC00A55BE1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				76B060F21D844BAC00A55BE1 /* PBXTargetDependency */,
+			);
+			name = CountriesTests;
+			productName = CountriesTests;
+			productReference = 76B060F01D844BAC00A55BE1 /* CountriesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		76B060CF1D844BAC00A55BE1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = anoopm;
+				TargetAttributes = {
+					76B060D61D844BAC00A55BE1 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					76B060EF1D844BAC00A55BE1 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 76B060D61D844BAC00A55BE1;
+					};
+				};
+			};
+			buildConfigurationList = 76B060D21D844BAC00A55BE1 /* Build configuration list for PBXProject "Countries" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 76B060CE1D844BAC00A55BE1;
+			productRefGroup = 76B060D81D844BAC00A55BE1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				76B060D61D844BAC00A55BE1 /* Countries */,
+				76B060EF1D844BAC00A55BE1 /* CountriesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		76B060D51D844BAC00A55BE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76B060EA1D844BAC00A55BE1 /* LaunchScreen.storyboard in Resources */,
+				76B060E71D844BAC00A55BE1 /* Assets.xcassets in Resources */,
+				76B060E51D844BAC00A55BE1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76B060EE1D844BAC00A55BE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		76B060D31D844BAC00A55BE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76B061021D844BE200A55BE1 /* CountriesStore.m in Sources */,
+				767FAB6B1D8915B000869875 /* CountryDetailTableViewCell.m in Sources */,
+				76B061091D8454EC00A55BE1 /* CountriesDataSource.m in Sources */,
+				76B060DF1D844BAC00A55BE1 /* AppDelegate.m in Sources */,
+				76B060DC1D844BAC00A55BE1 /* main.m in Sources */,
+				76B061121D84ACEE00A55BE1 /* SimpleCountry.m in Sources */,
+				767FAB681D890EE900869875 /* GenericCellData.m in Sources */,
+				76B061251D85F88E00A55BE1 /* CountryDetailsViewController.m in Sources */,
+				76B061171D84AFAB00A55BE1 /* CountryTableCell.m in Sources */,
+				76B0611E1D84C04300A55BE1 /* AMNetworkManager.m in Sources */,
+				76B0610E1D845E4800A55BE1 /* CountriesViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76B060EC1D844BAC00A55BE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76B060F51D844BAC00A55BE1 /* CountriesTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		76B060F21D844BAC00A55BE1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 76B060D61D844BAC00A55BE1 /* Countries */;
+			targetProxy = 76B060F11D844BAC00A55BE1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		76B060E31D844BAC00A55BE1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				76B060E41D844BAC00A55BE1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		76B060E81D844BAC00A55BE1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				76B060E91D844BAC00A55BE1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		76B060F71D844BAC00A55BE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		76B060F81D844BAC00A55BE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		76B060FA1D844BAC00A55BE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Countries/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.anoop.countries.Countries;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		76B060FB1D844BAC00A55BE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Countries/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.anoop.countries.Countries;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		76B060FD1D844BAC00A55BE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CountriesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.anoop.countries.CountriesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Countries.app/Countries";
+			};
+			name = Debug;
+		};
+		76B060FE1D844BAC00A55BE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CountriesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.anoop.countries.CountriesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Countries.app/Countries";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		76B060D21D844BAC00A55BE1 /* Build configuration list for PBXProject "Countries" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76B060F71D844BAC00A55BE1 /* Debug */,
+				76B060F81D844BAC00A55BE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76B060F91D844BAC00A55BE1 /* Build configuration list for PBXNativeTarget "Countries" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76B060FA1D844BAC00A55BE1 /* Debug */,
+				76B060FB1D844BAC00A55BE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76B060FC1D844BAC00A55BE1 /* Build configuration list for PBXNativeTarget "CountriesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76B060FD1D844BAC00A55BE1 /* Debug */,
+				76B060FE1D844BAC00A55BE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 76B060CF1D844BAC00A55BE1 /* Project object */;
+}
