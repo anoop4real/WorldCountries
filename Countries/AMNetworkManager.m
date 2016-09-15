@@ -32,7 +32,11 @@
     });
     return sharedManager;
 }
-
+/*!
+ Cancel All ongoing network operation in the session.
+ @param nil
+ @result nil
+ */
 - (void) cancelOnGoingTasks{
     
     if(self.currentSession){
@@ -40,10 +44,17 @@
         [self.currentSession invalidateAndCancel];
     }
 }
--(void) fetchDataUsingURRRequest:(NSURLRequest*)request withResponseBlock:(void (^)(NSData* data))responseBlock andErrorBlock:(void(^)(NSString* errorMessage))errorBlock
+/*!
+ Method used to fire network API requests.
+ @param success block expected to return data
+ @param error block which will bring user understandable error.
+ @result nil
+ */
+-(void) fetchDataUsingURLRequest:(NSURLRequest*)request withResponseBlock:(void (^)(NSData* data))responseBlock andErrorBlock:(void(^)(NSString* errorMessage))errorBlock
 {
     NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:config delegate:self delegateQueue:nil];
+    // Set as current session.
     self.currentSession = session;
     [[session dataTaskWithURL:[request URL] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if(error){
@@ -55,7 +66,11 @@
         }
     }] resume];
 }
-
+/*!
+ Prepare user understandable error
+ @param (NSError*) error
+ @result nil
+ */
 -(NSString*) getUserErrorMessageForError:(NSError*) error{
     
     NSString *errorMessage = NSLocalizedString(@"Unknown Error, please retry", @"Default Error message");

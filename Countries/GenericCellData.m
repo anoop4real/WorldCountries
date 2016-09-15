@@ -8,6 +8,9 @@
 
 #import "GenericCellData.h"
 
+/*!
+ Generic object holds the data to show Title and details provided
+ */
 @implementation GenericCellData
 
 @end

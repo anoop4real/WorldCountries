@@ -1,4 +1,4 @@
-//
+ //
 //  CountriesStore.m
 //  Countries
 //
@@ -10,7 +10,8 @@
 #import "SimpleCountry.h"
 #import "AMNetworkManager.h"
 #import "GenericCellData.h"
-#define COUNTRY_DETAILS_REQUEST_URL @"https://restcountries.eu/rest/v1/name/%@?fullText=true"
+#define COUNTRY_DETAILS_REQUEST_URL @"https://restcountries.eu/rest/v1/alpha/%@"
+
 @interface CountriesStore()
 
 @property(nonatomic, strong) AMNetworkManager *networkManager;
@@ -44,6 +45,8 @@
 - (void) cancelOnGoingTasks{
     [self.networkManager cancelOnGoingTasks];
 }
+
+// Method to fetch the ISO Country list with the help of NSLocale
 - (NSMutableArray *)getBasicCountryData
 {
     
@@ -52,7 +55,7 @@
     {
         NSString *countryName = [[NSLocale currentLocale] displayNameForKey:NSLocaleCountryCode value:countryCode];
         
-        //workaround for simulator bug
+        //Fix for an issue in simulator
         if (!countryName)
         {
             countryName = [[NSLocale localeWithLocaleIdentifier:@"en_US"] displayNameForKey:NSLocaleCountryCode value:countryCode];
@@ -66,48 +69,63 @@
     [countryListArray sortUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"countryName" ascending:YES]]];
     return countryListArray;
 }
+#pragma mark Data Operation
 /*!
  Method used to get the details of a country.
- @param success block expected to return a Country Object
+ @param success block expected to return parsed array
  @param error block which will bring user understandable error.
  @result nil
  */
--(void) fetchDetailsForCountryWithName:(NSString*) countryName withSuccesBlock:(void (^)(NSArray* countryData))responseBlock andErrorBlock:(void(^)(NSString* errorMessage))errorBlock{
+-(void) fetchDetailsForCountryWithCode:(NSString*) countryCode withSuccesBlock:(void (^)(NSArray* countryData))responseBlock andErrorBlock:(void(^)(NSString* errorMessage))errorBlock{
     
     
-    NSString* url = [NSString stringWithFormat:COUNTRY_DETAILS_REQUEST_URL,countryName];
-    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+    NSString* url = [NSString stringWithFormat:COUNTRY_DETAILS_REQUEST_URL,countryCode];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:[url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]]]];
     
-    [self.networkManager fetchDataUsingURRRequest:urlRequest
+    [self.networkManager fetchDataUsingURLRequest:urlRequest
                                 withResponseBlock:^(NSData *data) {
-                                    NSLog(@"Data fetched");
                                     NSError *error;
-                                    NSArray *countryArray = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
-                                    if (!countryArray) {
+                                    NSDictionary *countryDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
+                                    if (!countryDict) {
                                         errorBlock(@"Unknown error occured, please retry");
                                     }else{
-                                        responseBlock([self countryDataWithDict:countryArray[0]]);
+                                        if ([countryDict isKindOfClass:[NSDictionary class]]) {
+                                            responseBlock([self countryDataWithDict:countryDict]);
+                                        }else{
+                                            errorBlock(@"Unknown error occured, please retry");
+                                        }
+                                        
                                     }
-                                    NSLog(@"%@",countryArray);
+                                    //NSLog(@"%@",countryArray);
                                 } andErrorBlock:^(NSString *errorMessage) {
                                     errorBlock(errorMessage);
                                 }];
 }
-
+#pragma mark Parsers
+// It is the objective of CountryStore object to parse the response and sent to the data source in the required format. This method parses the response and at this point of time fetches all the string type and NSNumber type.
 -(NSArray*) countryDataWithDict:(NSDictionary*)countryDict{
     
     NSMutableArray *countryDetailsArray = [NSMutableArray array];
     for (NSString* key in countryDict.allKeys) {
         if ([countryDict[key] isKindOfClass:[NSString class]]) {
+            [countryDetailsArray addObject:[self createCellDataWith:[key uppercaseString] andDetail:countryDict[key]]];
             
-            GenericCellData *cellData = [[GenericCellData alloc] init];
-            cellData.title  = [key uppercaseString];
-            cellData.detail = countryDict[key];
-            [countryDetailsArray addObject:cellData];
+        }else if ([countryDict[key] isKindOfClass:[NSNumber class]]){
+            
+            NSNumber* data = countryDict[key];
+            [countryDetailsArray addObject:[self createCellDataWith:[key uppercaseString] andDetail:[data stringValue]]];
         }
     }
     [countryDetailsArray sortUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"title" ascending:YES]]];
     return countryDetailsArray;
 }
 
+// Fill up the GenericCellData object which is used to display in the details screen
+- (GenericCellData*) createCellDataWith:(NSString*) title andDetail:(NSString*)detail{
+    
+    GenericCellData *cellData = [[GenericCellData alloc] init];
+    cellData.title  = title;
+    cellData.detail = detail;
+    return cellData;
+}
 @end

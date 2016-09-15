@@ -7,7 +7,7 @@
 //
 
 #import "CountryDetailTableViewCell.h"
-
+//Cell to hold the detailed attributes of a country
 @implementation CountryDetailTableViewCell
 
 - (void)awakeFromNib {

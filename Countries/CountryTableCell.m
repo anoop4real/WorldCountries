@@ -7,7 +7,7 @@
 //
 
 #import "CountryTableCell.h"
-
+// Cell which holds the list data
 @implementation CountryTableCell
 
 - (void)awakeFromNib {

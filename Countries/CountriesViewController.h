@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CountriesViewController : UIViewController<UITableViewDelegate>{
+@interface CountriesViewController : UIViewController<UITableViewDelegate,UISearchBarDelegate, UISearchControllerDelegate, UISearchResultsUpdating>{
     
     IBOutlet UITableView *countryTableView;
 }
-
+@property (nonatomic, strong) UISearchController *searchController;
 @end

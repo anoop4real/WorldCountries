@@ -18,8 +18,11 @@ typedef NS_ENUM(NSInteger,TableViewCellType){
 @interface CountriesDataSource : NSObject<UITableViewDataSource>
 
 -(instancetype) initWithCountryDataWithCellType:(TableViewCellType) tableCellType;
-- (void) fetchDetailsForCountry:(NSString*) countryName withCompletionBlock:(void (^)(BOOL isSuccess,NSString* message))completionBlock;
+- (void) fetchDetailsForCountry:(NSString*) countryCode withCompletionBlock:(void (^)(BOOL isSuccess,NSString* message))completionBlock;
 - (NSString*) getCountryNameAtIndex:(NSInteger) index;
 - (NSString*) getCountryCodeAtIndex:(NSInteger) index;
 - (void) cancelOnGoingTasks;
+- (void) filterUsingSearchText:(NSString*) searchString;
+
+@property(nonatomic) BOOL isSearchActive;
 @end

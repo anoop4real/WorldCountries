@@ -13,6 +13,6 @@
 
 +(instancetype) sharedStore;
 - (NSMutableArray *)getBasicCountryData;
--(void) fetchDetailsForCountryWithName:(NSString*) countryName withSuccesBlock:(void (^)(NSArray* countryData))responseBlock andErrorBlock:(void(^)(NSString* errorMessage))errorBlock;
+-(void) fetchDetailsForCountryWithCode:(NSString*) countryCode withSuccesBlock:(void (^)(NSArray* countryData))responseBlock andErrorBlock:(void(^)(NSString* errorMessage))errorBlock;
 - (void) cancelOnGoingTasks;
 @end

@@ -11,6 +11,6 @@
 @interface AMNetworkManager : NSObject<NSURLSessionTaskDelegate>
 
 +(instancetype) sharedManager;
--(void) fetchDataUsingURRRequest:(NSURLRequest*)request withResponseBlock:(void (^)(NSData* data))responseBlock andErrorBlock:(void(^)(NSString* errorMessage))errorBlock;
+-(void) fetchDataUsingURLRequest:(NSURLRequest*)request withResponseBlock:(void (^)(NSData* data))responseBlock andErrorBlock:(void(^)(NSString* errorMessage))errorBlock;
 - (void) cancelOnGoingTasks;
 @end

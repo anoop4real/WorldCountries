@@ -19,15 +19,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    countryDetailTableView.rowHeight = UITableViewAutomaticDimension;
+    countryDetailTableView.estimatedRowHeight = 80.0f;
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    // Load initial data
     [self loadData];
 }
 
 - (void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];
+    // Cancel the on-going network requests
     [self.countriesDataSource cancelOnGoingTasks];
 }
 
@@ -35,14 +39,18 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 /*!
  Load country data in the tableview
  @param nil
  @result nil
  */
 - (void) loadData{
+    // Set the flag and country name as we already have that information
     flagView.image = [UIImage imageNamed:self.selectedCountryCode];
-    name.text =self.selectedCountryName;
+    name.text      = self.selectedCountryName;
+    
+    // Initialize the datasource with the detail celltype
     self.countriesDataSource = [[CountriesDataSource alloc] initWithCountryDataWithCellType:CountryDetailsCellType];
     countryDetailTableView.delegate = self;
     countryDetailTableView.dataSource = self.countriesDataSource;
@@ -57,7 +65,9 @@
 -(void) reloadData{
     
     [self showLoader];
-    [self.countriesDataSource fetchDetailsForCountry:self.selectedCountryName withCompletionBlock:^(BOOL isSuccess, NSString *message) {
+    // Ask datasource to give the details of the country
+    [self.countriesDataSource fetchDetailsForCountry:self.selectedCountryCode withCompletionBlock:^(BOOL isSuccess, NSString *message) {
+        // If we have the data, reload the data
         if (isSuccess) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 [countryDetailTableView reloadData];
@@ -71,11 +81,15 @@
         }
     }];
 }
-
+/*!
+ Method to show alert incase of failure
+ @param (NSString*) errorMessage
+ @result nil
+ */
 -(void) showAlertWithError:(NSString*) errorMessage{
     
     UIAlertController *alertController = [UIAlertController
-                                          alertControllerWithTitle:@"Error"
+                                          alertControllerWithTitle:NSLocalizedString(@"Error", @"Error Message")
                                           message:errorMessage
                                           preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", @"Cancel Button")
