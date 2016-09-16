@@ -53,6 +53,8 @@
 -(void) fetchDataUsingURLRequest:(NSURLRequest*)request withResponseBlock:(void (^)(NSData* data))responseBlock andErrorBlock:(void(^)(NSString* errorMessage))errorBlock
 {
     NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+    config.requestCachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
+    config.URLCache = nil;
     NSURLSession *session = [NSURLSession sessionWithConfiguration:config delegate:self delegateQueue:nil];
     // Set as current session.
     self.currentSession = session;

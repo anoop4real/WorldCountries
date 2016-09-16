@@ -79,8 +79,9 @@
 -(void) fetchDetailsForCountryWithCode:(NSString*) countryCode withSuccesBlock:(void (^)(NSArray* countryData))responseBlock andErrorBlock:(void(^)(NSString* errorMessage))errorBlock{
     
     
-    NSString* url = [NSString stringWithFormat:COUNTRY_DETAILS_REQUEST_URL,countryCode];
-    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:[url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]]]];
+    NSString* urlString = [NSString stringWithFormat:COUNTRY_DETAILS_REQUEST_URL,countryCode];
+    NSURL *url = [NSURL URLWithString:[urlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]]];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:2.0];
     
     [self.networkManager fetchDataUsingURLRequest:urlRequest
                                 withResponseBlock:^(NSData *data) {
