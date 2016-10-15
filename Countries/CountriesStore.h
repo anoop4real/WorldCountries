@@ -12,7 +12,7 @@
 @interface CountriesStore : NSObject
 
 +(instancetype) sharedStore;
-- (NSMutableArray *)getBasicCountryData;
+- (NSMutableArray *)basicCountryData;
 -(void) fetchDetailsForCountryWithCode:(NSString*) countryCode withSuccesBlock:(void (^)(NSArray* countryData))responseBlock andErrorBlock:(void(^)(NSString* errorMessage))errorBlock;
 - (void) cancelOnGoingTasks;
 @end

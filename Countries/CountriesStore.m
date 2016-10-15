@@ -47,7 +47,7 @@
 }
 
 // Method to fetch the ISO Country list with the help of NSLocale
-- (NSMutableArray *)getBasicCountryData
+- (NSMutableArray *)basicCountryData
 {
     
     NSMutableArray<SimpleCountry*> *countryListArray = [NSMutableArray array];
@@ -85,7 +85,7 @@
     
     [self.networkManager fetchDataUsingURLRequest:urlRequest
                                 withResponseBlock:^(NSData *data) {
-                                    NSError *error;
+                                    NSError *error = nil;
                                     NSDictionary *countryDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
                                     if (!countryDict) {
                                         errorBlock(@"Unknown error occured, please retry");

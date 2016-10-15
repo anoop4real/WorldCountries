@@ -30,7 +30,7 @@
     if(self){
         if (tableCellType == CountryCellType) {
             // Basic cell data, Get country name and code.
-            _countryListArray= [[CountriesStore sharedStore] getBasicCountryData];
+            _countryListArray= [[CountriesStore sharedStore] basicCountryData];
         }
         _cellType = tableCellType;
     }
@@ -58,7 +58,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-
+    
     if (_cellType == CountryCellType) {
         // Get country cell
         return [self configureCountryCellWithTableView:tableView forIndexPath:indexPath];
@@ -67,7 +67,7 @@
         // Set up country detail cell
         return [self configureCountryDetailCellWithTableView:tableView forIndexPath:indexPath];
     }
-
+    
     // Ideally code should not reach here
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     return cell;
@@ -149,11 +149,11 @@
 - (void) fetchDetailsForCountry:(NSString*) countryCode withCompletionBlock:(void (^)(BOOL isSuccess,NSString* message))completionBlock{
     
     [[CountriesStore sharedStore] fetchDetailsForCountryWithCode:countryCode
-                                      withSuccesBlock:^(NSArray *countryData) {
-                                          _countryListArray = [countryData mutableCopy];
-                                          completionBlock(YES,nil);
-                                      } andErrorBlock:^(NSString *errorMessage) {
-                                          completionBlock(NO,errorMessage);
-                                      }];
+                                                 withSuccesBlock:^(NSArray *countryData) {
+                                                     _countryListArray = [countryData mutableCopy];
+                                                     completionBlock(YES,nil);
+                                                 } andErrorBlock:^(NSString *errorMessage) {
+                                                     completionBlock(NO,errorMessage);
+                                                 }];
 }
 @end

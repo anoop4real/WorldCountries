@@ -10,6 +10,6 @@
 
 @interface SimpleCountry : NSObject
 
-@property (nonatomic, strong) NSString *countryName;
-@property (nonatomic, strong) NSString *countryCode;
+@property (nonatomic, copy) NSString *countryName;
+@property (nonatomic, copy) NSString *countryCode;
 @end

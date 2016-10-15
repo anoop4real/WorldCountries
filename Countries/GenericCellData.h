@@ -10,6 +10,6 @@
 
 @interface GenericCellData : NSObject
 
-@property(nonatomic, strong) NSString* title;
-@property(nonatomic, strong) NSString* detail;
+@property(nonatomic, copy) NSString* title;
+@property(nonatomic, copy) NSString* detail;
 @end

@@ -17,7 +17,7 @@
     IBOutlet UIActivityIndicatorView *activityIndicator;
 }
 
-@property(nonatomic, strong)NSString *selectedCountryName;
-@property(nonatomic, strong)NSString *selectedCountryCode;
+@property(nonatomic, copy)NSString *selectedCountryName;
+@property(nonatomic, copy)NSString *selectedCountryCode;
 
 @end
